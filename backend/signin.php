@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <?php include 'includes/head.php'; ?>
+    <?php include '../includes/head.php'; ?>
     <title>Soggies - Sign in</title>
 </head>
 <!-- 
