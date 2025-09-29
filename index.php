@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <?php include '../includes/head.php'; ?>
+    <?php include 'includes/head.php'; ?>
     <title>Soggies - Spring 2025 Pre-Orders Are Here!</title>
 </head>
 <!-- 
