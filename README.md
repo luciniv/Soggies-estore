@@ -1,12 +1,52 @@
 # Welcome to Soggies!
 Soggies is a software design and development project from the final of my web development course. Completed in approximately 3 days, Soggies served as my exploration into PHP and Apache server management, alongside the use of AJAX (dynamic data loading and UI updates).
 
-## Architecture
+## Status
+Soggies will not receive further updates and is not intended for future hosting. 
+
+If you would like to experiment with Soggies' code nonetheless, run:
+```bash 
+git clone https://github.com/luciniv/Soggies-estore.git
+cd Soggies-estore
+```
+
+### Note for password retreival:
+Soggies stores sensitive information in private files on its Apache server. .env reads are also available for php. An example is listed as the second code excerpt.
+
+File reading:
+```php
+$InputFile = fopen("file.pwd", "r");
+$password = fgets($InputFile, 100);
+fclose($InputFile);
+```
+.env usage:
+```php
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+$password = $_ENV['PASSWORD'];
+```
+
+## Tech stack
+- **Frontend:** HTML, CSS, JavaScript, AJAX
+- **Backend:** PHP
+- **Database:** MySQL 8
+- **Hosting:** Apache
+
+## Repository structure
+```
+/src        -> PHP files (+ HTML)
+/includes   -> Reusable HTML components for PHP
+/scripts    -> Frontend JavaScript and backend linking AJAX
+/assets     -> Static resources (icons, logos, etc.)
+```
+
+## Design notes
 - PHP backend to validate form input and keep data secure
 - MySQL database for product information, customer data, and tracking sales
 - AJAX for real-time cart updates and username availability responses
 - Dynamic page element creation (enabled with PHP, sourced from my database)
-- A frontend handled with HTML, CSS, and JS
+- A frontend handled with HTML, CSS, and JavaScript
 
 ### Future implementations? Improvements?
 - Connection with payment processing systems
